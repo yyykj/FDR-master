@@ -1,4 +1,11 @@
 # FDR-master
+<div align="center">
+  <img src="https://github.com/yyykj/FDR-master/edit/main/fig.jpg">
+</div>
+Mainframe diagram. The 3D point cloud data enters the farthest point sampling layer (FPS), grouping layer (Group), and Tucker decomposition layer
+to get the core tensor features on the one hand, and the backbone network to get the classifier features on the other hand. The classifier features are aligned
+with the feature dimensions through MLP and linear layers, and then distance features are calculated with the core tensor features. Finally, the distance features
+are incorporated into the classifier features for classification.
 
 
 # Reference By
