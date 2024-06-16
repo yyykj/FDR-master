@@ -11,7 +11,7 @@ Taking pointmlp as an example (see mainly pointmlp.py), we perform TUCKER decomp
 The core code is as follows:
 core, factors = tucker(X, rank=[a, b, c])
 The code of the tucker function is as follows：
-` ``
+```
 def tucker(tensor, rank, fixed_factors=None, n_iter_max=100, init='svd',
            svd='numpy_svd', tol=10e-5, random_state=None, mask=None, verbose=False):
     if fixed_factors:
@@ -40,9 +40,9 @@ def tucker(tensor, rank, fixed_factors=None, n_iter_max=100, init='svd',
                                        svd=svd, tol=tol, random_state=random_state, mask=mask,
                                        verbose=verbose)
         return TuckerTensor((core, factors))
-` ``
+```
 On the other hand, feature vectors passing through the pointmlp network are dimensionally aligned through the MLP and Linear layers. Then, the feature distance between two feature vectors is calculated by cosine_similarity() :
-` ``output = torch.cosine_similarity(x, x2).CUDA () ` ``(The ablation experiment in this paper proves that the use of cosine similarity is more reasonable). 
+```output = torch.cosine_similarity(x, x2).CUDA () ```(The ablation experiment in this paper proves that the use of cosine similarity is more reasonable). 
 
 Finally, after some dimensionality processing, the distance feature is spliced with the feature vector output from the backbone network and input into the classification layer for object classification.
 
