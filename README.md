@@ -1,6 +1,6 @@
 # FDR-master
 <div align="center">
-  <img src="[https://github.com/yyykj/FDR-master/edit/main/fig.jpg](https://github.com/yyykj/FDR-master/blob/main/fig.jpg)">
+  <img src="https://github.com/yyykj/FDR-master/blob/main/fig.jpg">
 </div>
 Mainframe diagram. The 3D point cloud data enters the farthest point sampling layer (FPS), grouping layer (Group), and Tucker decomposition layer
 to get the core tensor features on the one hand, and the backbone network to get the classifier features on the other hand. The classifier features are aligned
